@@ -8,12 +8,47 @@
   </head>
   <body class="uploadBack">
     <script src="index.js"></script>
-    <nav class = "navForUpload">
-      <a href="index.html">Homepage</a>
-      <a href="Test.html">DeleteMe</a>
-      <a herf ="#">About Page</a>
-    </nav>
+    <p id="uploadJs" ></p>
+      <nav class = "navForUpload">
+        <a href="index.html">Homepage</a>
+        <a href="Test.html">DeleteMe</a>
+        <a href ="about.html">About Page</a>
+    
+      </nav>
+    <!--Here We only Choose to upload -->
 
+  <div class="uploadDiv">
+    
+    <ul class="uploadUl">
+        <p class="uploadP">Please Select only audio file</audio></p>
+
+      <li class="uploadLi">
+          <label for="uploadaudio" class = "uploadLabel">Audio file</label>
+          <input type="file"  class ="uploadInput" accept="audio/*" value="uploadaudio">
+      </li>
+
+      <li class="uploadLi">
+        <label for="title" class= "uploadLabel">Song Name</label>
+        <input type="text" class="uploadInput" value="title" placeholder="tile of the song">
+      </li>
+
+      <li class="uploadLi">
+        <label for="artistName" class= "uploadLabel">Artist Name</label>
+        <input type="text" class="uploadInput" value="artistName" placeholder="Name">
+      </li>
+
+      <li class="uploadLi">
+        <label for="MusicGenre" class ="uploadLabel">Genre</label>
+        <select>
+          <option value="-">--</option>
+          <option value="pop">pop</option>
+          <option value="hippop">Hip pop</option>
+          <option value="others">others</option>
+        </select>
+      </li>
+  </ul>
+    
+  </div>
   
     <h2 class="uploadH2">Hi, World </h2>
   </body>
