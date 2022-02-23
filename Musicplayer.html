@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Music player</title>
+<link rel='stylesheet' type='text/css' href='style.css'>
+<script language='JavaScript' type='text/javascript'>
+function changeSong(song,title){
+var begin="<audio controls><source src='../web3/'>";
+var ending=" 'type=audio/mp3'></source></audio>";
+var ans=begin+song+ending;
+document.getElementById('audioplayer').innerHTML=ans;
+document.getElementById('songtitle').innerHTML=title;
+}
+
+</script>
+</head>
+<body class='default'>
+<h1 id='songtitle'>Music</h1>
+<div id='audioplayer'>
+<audio controls>
+<source src='../web3/FredericChopin-NocturneNo.2Op.9.mp3' type='audio/mp3'></source>
+</audio>
+</div>
+<div id='upload'>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <label for ="file">choose file:</label>
+  <input type="file" name="file1"/>
+  <input type="submit" value="Submit"/>
+</form>
+
+</div>
+<br><a href='index.html'>home</a>
+</body>
+</html>
