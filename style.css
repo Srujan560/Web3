@@ -1,3 +1,6 @@
+/* Please Class so it does not chage every page in the background 
+For examples please look at myCss.css and Upload.html Where I use class="any_name_u _give" and 
+in css file just tag.any_name_u_give*/
 body {
   background-color: lightblue;
 }
