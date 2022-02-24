@@ -1,68 +1,3 @@
-nav.navForUpload {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-nav.navForUpload a{
-    text-decoration: none;
-    display: block;
-    padding: 15px 25px;
-    text-align: center;
-    background-color: rgb(189, 185, 185);
-    color: #464141;
-    margin: 0;
-    font-family: sans-serif;
-}
-nav.navForUpload  a:hover {
-    background-color: #777777;
-    color: #ffffff;
-  }
-body.uploadBack{
-align-items: center;
-  background-color: #000;
-  justify-content: center;
-  height: 100vh;
-  
-     
-}
-p.uploadP{color:white}
-h2.uploadH2{color:white}
-div.uploadDiv{
-    background-color: #15172b;
-    border-radius: 20px;
-    box-sizing: border-box;
-    height: 500px;
-    padding: 20px;
-    width: 320px;
-    text-align: center;
-    float:center;
-    
-    
-}
-input.uploadInput{/* to chage placeholder color to back this work for most browser*/
-   /* color: black;
-    text-align:center;
-    margin: center;
-    width: 60%;
-    border: 0;
-    box-sizing: border-box;*/
-    background-color: #303245;
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: #eee;
-    font-size: 18px;
-    height: 100%;
-    outline: 0;
-    padding: 4px 20px 0;
-    width: 100%;
-}
-
-.uploadLabel{
-    color:whitesmoke;
-    
-}
-
 ul.uploadUl {
     list-style-type: none;
     margin: 0;
@@ -70,10 +5,7 @@ ul.uploadUl {
     display:inline;
 }
 
-.uploadLi{
-    
-    
-}
+
 
 
 
