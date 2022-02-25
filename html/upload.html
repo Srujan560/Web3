@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/myCss.css" />
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
@@ -19,7 +20,7 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("./gradient_bg.jpg");
+  background-image: url("../images/gradient_bg.jpg");
   min-height: 100%;
 }
 
@@ -39,11 +40,13 @@ body, html {
       <a href="./about.html" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> ABOUT</a>
       <a href="./profile.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> PROFILE</a>
       <a href="./upload.html" class="w3-bar-item w3-button"><i class="fa fa-angle-double-up"></i> UPLOAD</a>
+     
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
       <i class="fa fa-bars"></i>
+    </a>
+   
     </a>
   </div>
 </div>
@@ -51,11 +54,9 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i>  ABOUT</a>
+  <a href="./profile.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user"></i>  PROFILE</a>
+  <a href="./upload.html" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-angle-double-up"></i>  UPLOAD</a>
 </nav>
 
 <!-- Header with full-height image -->
@@ -63,8 +64,55 @@ body, html {
   
   
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <h1 id='songtitle' style="color:whitesmoke">This is your profile</h1>
-    
+    <div class="uploader">
+      <ul class="uploadUl">
+        <p class="uploadP">Please Select only audio file</audio></p>
+
+        <li class="uploadLi">
+          <label for="uploadaudio" class = "uploadLabel">Audio file</label>
+          <input type="file"  class ="uploadInput" accept="audio/*" value="uploadaudio">
+        </li>
+
+        <li class="uploadLi">
+          <label for="title" class= "uploadLabel">Song Name</label>
+          <input type="text" class="uploadInput"  placeholder="tile of the song">
+        </li>
+
+        <li class="uploadLi">
+          <label for="artistName" class= "uploadLabel">Artist Name</label>
+          <input type="text" class="uploadInput"  placeholder="Name">
+        </li>
+
+        <li class="uploadLi">
+          <label for="MusicGenre" class ="uploadLabel">Genre</label>
+          <select>
+            <option >pick one</option>
+            <option value="pop">Pop</option>
+            <option value="hiphop">Hip-Hop</option>
+            <option value="Rock">Rock</option>
+            <option value="edm">EDM</option>
+            <option value="jazz">Jazz</option>
+            <option value="heavymetal">Heavy Metal</option>
+            <option value="country">Country</option>
+            <option value="classical">Classical</option>
+            <option value="classicRock">Classic Rock</option>
+            <option value="blues">Blues</option>
+            <option value="funk">Funk</option>
+            <option value="disco">Disco</option>
+            <option value="religious">Religious</option>
+            <option value="rap">Rap</option>
+            <option value="rnb">R&B</option>
+            <option value="punk">Punk rock</option>
+            <option value="children">Children</option>
+            <option value="others">others</option>
+          </select>
+        </li>
+        <li class="uploadLi">
+          <label for="Submit" class = "uploadLabel"></label>
+          <input type="submit" value="Submit">
+        </li>
+      </ul>
+    </div>
     <!--<p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>-->
   </div> 
 
