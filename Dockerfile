@@ -1,0 +1,3 @@
+FROM node:alpine
+COPY . /app
+CMD node javascript/put-music.js --token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDM1QmJkRGYxMDBhQzZFZjRjRTk1NzZhZWY2QjQwNDBCN0E3ZmE3NzciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDc3MzAxODYyOTksIm5hbWUiOiJ1cGxvYWRNdXNpYyJ9.OlQt_7YGKiGGFB9C0RhkvOGwl6TN5BBCaI6J96uh_E4 ~/Desktop/Software\ Engineering\ 418/project-demo/sounds
