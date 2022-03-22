@@ -18,4 +18,8 @@ for mac (please read how ): https://docs.microsoft.com/en-us/powershell/scriptin
 Dockerfile, and Need to work Upload File
 
 ```
+I add add wallet, You have to install Node js 
+path to web3-music-appl
+in that path do npm start
+you will get lot errors but, all you need to do is keep installing packages just googe errors
 
