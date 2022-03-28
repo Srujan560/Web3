@@ -8,7 +8,9 @@ ReactDOM.render(<UploadMusic />, document.getElementById("root"));
 function upload() {
   return (
     <div>
-      <h1>Upload test</h1>
+      <center>
+        <h1>Upload test</h1>
+      </center>
     </div>
   );
 }
