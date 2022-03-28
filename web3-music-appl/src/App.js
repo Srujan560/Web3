@@ -16,12 +16,15 @@ import Button from 'react-bootstrap/Button';
 const buttonCenter = {
     width: "30vw",
     height: "10vh",
-    fontSize: "40%",
+    fontSize: "4vh",
     marginLeft: "35vw",
     marginRight: "35vw",
     marginTop: "45vh",
     marginBottom: "45vh",
-    padding: "0px"
+    padding: "0px",
+    border: "1vh solid",
+    borderRadius: 100,
+    fontFamily: 'Inconsolata'
   };
 
   
