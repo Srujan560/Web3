@@ -1,12 +1,13 @@
 import React from "react";
 import { useMoralis } from "react-moralis";
+import { Button } from "react-bootstrap";
 const LogoutButton = () => {
     const { logout, isAuthenticating } = useMoralis();
   
     return (
-      <button onClick={() => logout()} disabled={isAuthenticating}>
+      <Button variant="outline-danger" onClick={() => logout()} disabled={isAuthenticating}>
         Logout
-      </button>
+      </Button>
     )
   }
   export default LogoutButton;

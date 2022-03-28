@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {ethers} from 'ethers'
+import Button from 'react-bootstrap/Button';
 
 // src = "https://github.com/mikec3/my_tutorials/tree/master/MetaMask_Connection"
 const WallectCard = ()=>{
@@ -62,7 +63,7 @@ const WallectCard = ()=>{
         <div className='walletCard'>
             
 		<h4> {"Connection to MetaMask using window.ethereum methods"} </h4>
-		<button type="button" class="btn btn-outline-primary" onClick={connectWalletHandler}>{connButtonText}</button>
+		
 			<button onClick={connectWalletHandler}>{connButtonText}</button>
 			<div className='accountDisplay'>
 				<h3>Address: {defaultAccount}</h3>

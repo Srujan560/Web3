@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Profile from "./pages/profile";
@@ -10,7 +10,21 @@ import Navbar from "./pages/navbar";
 import { useMoralis } from "react-moralis";
 import Home from "./pages/home";
 import ReactDOM from "react-dom";
+import Button from 'react-bootstrap/Button';
 
+
+const buttonCenter = {
+    width: "30vw",
+    height: "10vh",
+    fontSize: "40%",
+    marginLeft: "35vw",
+    marginRight: "35vw",
+    marginTop: "45vh",
+    marginBottom: "45vh",
+    padding: "0px"
+  };
+
+  
 function App() {
   const { authenticate, isAuthenticated, user } = useMoralis();
   console.log("Hello world");
@@ -18,21 +32,20 @@ function App() {
   // const userPerf = Moralis.Object.extend("_users");
   if (!isAuthenticated) {
     return (
-      <div>
-        <button onClick={() => authenticate()}>Login with Metmask</button>
-        <p>Sign in with MetaMask, or Login</p>
+      <div style={{height:"100vh", backgroundColor:"bisque"}}>
+          <Button style={buttonCenter} variant="outline-success" onClick={() => authenticate()}>Login with MetaMask</Button>
       </div>
     );
   }
   return (
-    <div>
+    <body style={{backgroundColor:"bisque", height:"100vh"}}>
       <div>
-        <h4>Welcome User: {user.get("username")}</h4>
+        <h4 id="addr">Welcome User: {user.get("username")}</h4>
+        
       </div>
 
       <BrowserRouter>
         <Navbar />
-        <Logout />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<About />} />
@@ -43,7 +56,7 @@ function App() {
       {/* <div className="app">
         <Walletcard/>
       </div> */}
-    </div>
+    </body>
   );
 }
 
