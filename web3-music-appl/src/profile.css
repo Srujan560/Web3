@@ -1,0 +1,21 @@
+body{
+    background-color:bisque;
+}
+h1{
+    color: red;
+    font-size: 4em;
+    font-family: 'Inconsolata', monospace;
+    padding-bottom: 1em;
+}
+
+h2{
+    color: gray;
+    font-size: 2em;
+    font-family: 'Inconsolata', monospace;
+}
+
+h3{
+    color: gray;
+    font-size: 1em;
+    font-family: 'Inconsolata', monospace;
+}
