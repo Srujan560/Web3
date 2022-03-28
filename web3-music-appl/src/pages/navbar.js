@@ -6,7 +6,7 @@ const Layout = () => {
     <div>
         <ul>
           <li>
-            <Link to="/">Login</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/profile">profile</Link>

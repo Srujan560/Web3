@@ -6,7 +6,9 @@ function login(){
         <div>
              <Walletcard/>
              
+             
         </div>
+        
     )
 }
 export default login;
