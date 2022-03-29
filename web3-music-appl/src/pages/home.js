@@ -6,13 +6,8 @@ function home(){
         <div>
             <center>
                 <h1>Home</h1>
-            </center>    
-            <div class="row">
-                <div class="column">
-                    <img src={logo}/>
-
-                </div>
-            </div>
+                <img src={logo} width="20%"/>
+            </center> 
             
         </div>
         )

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {ethers} from 'ethers'
 import Button from 'react-bootstrap/Button';
+import getUserData from './pages/profile'
 
 // src = "https://github.com/mikec3/my_tutorials/tree/master/MetaMask_Connection"
 const WallectCard = ()=>{
@@ -18,7 +19,7 @@ const WallectCard = ()=>{
 				accountChangedHandler(result[0]);
 				setConnButtonText('Wallet Connected');
 				getAccountBalance(result[0]);
-				
+				getUserData(result);
 			})
 			.catch(error => {
 				setErrorMessage(error.message);

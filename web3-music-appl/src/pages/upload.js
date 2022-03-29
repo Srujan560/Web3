@@ -9,9 +9,9 @@ function upload() {
   return (
     <div>
       <center>
-        <h1>Upload test</h1>
+        <h1>Upload</h1>
       </center>
     </div>
   );
 }
-export default upload;
+export default UploadMusic;

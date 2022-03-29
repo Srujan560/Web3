@@ -1,5 +1,4 @@
 @import url(https://weloveiconfonts.com/api/?family=fontawesome);
-@import "spinner.css";
 
 /************************************
  * Shared between pages
@@ -129,6 +128,7 @@ label {
 }
 
 #upload-ui {
+  background-color: aqua;
   display: flex;
   flex-direction: column;
   align-items: center;

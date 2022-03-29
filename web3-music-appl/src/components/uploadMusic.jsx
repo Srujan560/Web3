@@ -1,27 +1,32 @@
 import { Button } from "bootstrap";
 import React, { Component } from "react";
-class UploadMusic extends Component {
-  state = {
-    numUploads: 0
-  };
+import "../styles/style.css";
+import { storeImage } from "../utils/storage";
+import {
+  makeClipboardButton,
+  showElement,
+  hideElement,
+  getSavedToken,
+  navToSettings
+} from "../utils/helpers";
 
-  onMusicUpload(e) {
-    let files = e.target.files;
-    console.warn("music file", files);
-  }
+class UploadMusic extends Component {
+  state = {};
+
   render() {
     return (
+      //{this.setupUploadUI()}
       <>
         <div id="upload-input-area">
           <div id="welcome-message">
-            Welcome to the image gallery example app for{" "}
-            <a href="https://web3.storage">Web3.Storage</a>. Drag an image onto
-            the box below, or use the button to select an image file!
+            Welcome to the Music Upload module with{" "}
+            <a href="https://web3.storage">Web3.Storage</a>. Drag an file onto
+            the box below, or use the button to select an song file!
           </div>
           <div id="drop-area">
             <form id="inputs">
               <label class="select-button" for="file-input">
-                Select an image file
+                Select an song file
               </label>
               <input
                 class="hidden"
@@ -44,10 +49,6 @@ class UploadMusic extends Component {
         </div>
       </>
     );
-  }
-  formatNumUploads() {
-    const { numUploads } = this.state;
-    return numUploads === 0 ? <h1>Zero</h1> : numUploads;
   }
 }
 
