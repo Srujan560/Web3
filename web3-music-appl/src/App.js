@@ -11,7 +11,7 @@ import { useMoralis } from "react-moralis";
 import Home from "./pages/home";
 import ReactDOM from "react-dom";
 import Button from 'react-bootstrap/Button';
-
+import MusicPlayer from "./MusicPlayer";
 
 const buttonCenter = {
     width: "30vw",
@@ -54,6 +54,7 @@ function App() {
           <Route path="/about" exact element={<About />} />
           <Route path="/profile" exact element={<Profile />} />
           <Route path="/upload" exact element={<Upload />} />
+          <Route path="/MusicPlayer" exact element={<MusicPlayer />} />
         </Routes>
       </BrowserRouter>
       {/* <div className="app">
