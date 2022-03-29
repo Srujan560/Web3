@@ -14,8 +14,6 @@ function userProfile(){
                     <div class="information">
                         
                         <h2>Wallet Address: </h2>
-                        <div id="wallet">
-                        </div>
                         <h3>-------------- </h3>
                         <h2>Balance: </h2>
                         <h3>-------------- </h3>
