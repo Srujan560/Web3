@@ -4,9 +4,7 @@ import Navbar from './navbar';
 function login(){
     return (
         <div>
-             <Walletcard/>
-             
-             
+            <Walletcard/>
         </div>
         
     )
