@@ -31,6 +31,7 @@ const Layout = () => {
             <Nav.Link href="/About">About</Nav.Link>
             <Nav.Link href="/profile">Profile</Nav.Link>
             <Nav.Link href="/upload">Upload</Nav.Link>
+            <Nav.Link href="/MusicPlayer">MusicPlayer</Nav.Link>
           </Nav>
           <Logout />
         </Navbar>
