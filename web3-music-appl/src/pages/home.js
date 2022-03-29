@@ -5,7 +5,7 @@ function home(){
     return (
         <div>
             <center>
-                <h1>Home</h1>
+                <h1 style={{fontSize: "4em"}}>Home</h1>
                 <img src={logo} width="20%"/>
             </center> 
             
