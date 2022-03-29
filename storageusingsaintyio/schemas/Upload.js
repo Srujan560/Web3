@@ -33,7 +33,7 @@ export default {
             },
           },
           {
-            title: " the music",
+            title: "the music",
             name: "Musicuplo",
             type: "file",
             options: {

@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import About from "./pages/About";
 import Profile from "./pages/profile";
 import Upload from "./pages/upload";
-import UploadMusic from "./components/uploadMusic";
+// import UploadMusic from "./components/uploadMusic";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import Navbar from "./pages/navbar";

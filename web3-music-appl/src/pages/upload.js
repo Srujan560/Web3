@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import UploadMusic from "../components/uploadMusic";
+// import UploadMusic from "../components/uploadMusic";
 import styles from "../App.css";
 
 //const uploadMusic = <h1>Upload Music</h1>;
@@ -15,4 +15,4 @@ function upload() {
     </div>
   );
 }
-export default UploadMusic;
+export default upload;
