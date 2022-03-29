@@ -10,7 +10,9 @@ const musicPlayer = () => {
             <Player />
             <SongList />
         </React.Fragment>
-
+        
+       
+        
         
     );
 };
