@@ -1,6 +1,15 @@
 import React, {Component} from  "react";
 import {Howl} from "howler";
-
+import {Button} from "react-bootstrap"
+const buttonCenter = {
+    width: "40vw",
+    height: "10vh",
+    fontSize: "2vh",
+    padding: "0px",
+    border: ".75vh solid",
+    borderRadius: 100,
+    fontFamily: 'Inconsolata'
+  };
 
 const music=[
     {
@@ -34,22 +43,26 @@ class Player extends Component{
 
     renderButtonSound=()=>{
         return music.map((soundObj,index)=>{
-            return(<div>
-                <li >{soundObj.name}</li>
-                <button key={index} onClick={()=> this.soundplay(soundObj.url)}> id:{soundObj.id} name:{soundObj.name}  Author:{soundObj.author}</button>
+            return(
+            <center>
+                <div>
+                    <h3 style={{fontFamily: 'Inconsolata', marginTop:"5vh"}}>{soundObj.name}</h3>
+                    <Button style={buttonCenter} variant="outline-dark" key={index} onClick={()=> this.soundplay(soundObj.url)}> ID:{soundObj.id} Name:{soundObj.name}  Author:{soundObj.author}</Button>
                 </div>
-                )
+            </center>
+            )
         }
         )
     }
 
     render(){
-    return(
+    return(<center>
         <div className="player">
-            <h1>Player</h1>
-            <ul>{this.renderButtonSound()}</ul>
+            
+            <h1 style={{fontSize: "4em"}}> Player</h1>
+            <p>{this.renderButtonSound()}</p>
         </div>
-
+        </center>
     );
 
 }

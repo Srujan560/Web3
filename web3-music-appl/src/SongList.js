@@ -3,7 +3,7 @@ import React from "react";
 
 const SongList = () => {
     return(
-        <div>Implement songlist here</div>
+        <div style={{color:"white"}}>Implement rest of songlist here</div>
     );
 };
 
