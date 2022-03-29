@@ -13,6 +13,7 @@ import ReactDOM from "react-dom";
 import Button from 'react-bootstrap/Button';
 import MusicPlayer from "./MusicPlayer";
 
+
 const buttonCenter = {
     width: "30vw",
     height: "10vh",
@@ -68,6 +69,8 @@ function App() {
       {/* <div className="app">
         <Walletcard/>
       </div> */}
+      
+     
     </body>
   );
 }

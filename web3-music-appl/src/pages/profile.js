@@ -6,6 +6,10 @@ import styles from '../App.css';
 import WallectCard from "../wallectcard";
 import user from "../App";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 90601d94617a0a63e1c26e49f054f60d857ae296
 function UserProfile(){
     const {user} = useMoralis();
     console.log("Hello world");
@@ -34,4 +38,8 @@ function UserProfile(){
         </body>
         )
 }
+<<<<<<< HEAD
 export default UserProfile; 
+=======
+export default UserProfile; 
+>>>>>>> 90601d94617a0a63e1c26e49f054f60d857ae296
