@@ -1,0 +1,215 @@
+@import url(https://weloveiconfonts.com/api/?family=fontawesome);
+@import "spinner.css";
+
+/************************************
+ * Shared between pages
+ ************************************/
+
+:root {
+  --main-accent-color: rgba(252, 101, 83, 1);
+  --link-color: rgba(23, 22, 145, 1);
+  --curent-page-nav-highlight-color: white;
+  --main-text-color: #2c3e50;
+  --page-bg-color: rgba(255, 242, 236, 1);
+  --button-text-color: white;
+  --popup-message-bg-color: rgba(23, 22, 145, 1);
+  --popup-message-text-color: white;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+  padding: 5px;
+}
+
+/* apply to hide an element, remove to show */
+.hidden {
+  display: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: -apple-system, system-ui;
+  padding: 0;
+  margin: 0;
+
+  color: var(--main-text-color);
+  background-color: var(--page-bg-color);
+}
+
+header {
+  min-width: 100vw;
+  background-color: var(--main-accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+nav {
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.nav-current-page {
+  color: var(--curent-page-nav-highlight-color);
+}
+
+form {
+  max-width: 500px;
+  padding: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  min-width: 90%;
+  min-height: 28px;
+}
+
+button {
+  background-color: var(--main-accent-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:disabled {
+  filter: brightness(0.85);
+}
+
+label {
+  display: block;
+  padding: 32px 0 8px;
+  font-weight: 700;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/************************************
+ * Upload page
+ ************************************/
+
+#welcome-message {
+  max-width: 600px;
+  margin: 40px;
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+#upload-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#upload-in-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#upload-in-progress.hidden {
+  display: none;
+}
+
+#upload-success {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#upload-success.hidden {
+  display: none;
+}
+
+#success-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#output {
+  padding: 16px;
+  margin-top: auto;
+  font-family: Courier New, ui-monospace, monospace;
+  font-weight: 500;
+  line-height: 1.6;
+  min-height: 200px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  max-width: 550px;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 40px;
+}
+
+#drop-area.highlight {
+  border-color: var(--main-accent-color);
+}
+
+.select-button {
+  display: inline-block;
+  padding: 10px;
+  background: var(--main-accent-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.select-button:hover {
+  filter: brightness(1.2);
+}
+
+#upload-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.preview-image {
+  max-height: 60vh;
+  max-width: 800px;
+}
+
+#success-links {
+  margin: 30px;
+}

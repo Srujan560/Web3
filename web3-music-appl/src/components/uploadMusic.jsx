@@ -12,17 +12,35 @@ class UploadMusic extends Component {
   render() {
     return (
       <>
-        <div>
-          <span>{this.formatNumUploads()}</span>
-          <button>Upload</button>
-        </div>
-        <div onSubmit={this.onMusicUpload}>
-          <h1>File Upload</h1>
-          <input
-            type="file"
-            name="music"
-            onMusicUpload={(e) => this.onMusicUpload(e)}
-          />
+        <div id="upload-input-area">
+          <div id="welcome-message">
+            Welcome to the image gallery example app for{" "}
+            <a href="https://web3.storage">Web3.Storage</a>. Drag an image onto
+            the box below, or use the button to select an image file!
+          </div>
+          <div id="drop-area">
+            <form id="inputs">
+              <label class="select-button" for="file-input">
+                Select an image file
+              </label>
+              <input
+                class="hidden"
+                type="file"
+                id="file-input"
+                accept=".jpeg,.jpg,.png,.gif,image/*"
+              />
+
+              <img id="image-preview" class="preview-image" />
+
+              <div class="spacer"></div>
+              <label for="caption-input">Enter a caption</label>
+              <input id="caption-input" placeholder="Enter a caption" />
+
+              <button id="upload-button" disabled="true">
+                Upload to Web3.Storage
+              </button>
+            </form>
+          </div>
         </div>
       </>
     );
