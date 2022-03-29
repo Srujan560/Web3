@@ -39,11 +39,15 @@ function App() {
         <center>
           <h1>Welcome to the Web3 Music Player.</h1>
           <h2>Connect your MetaMask wallet below to sign in.</h2>
-          <Button style={buttonCenter} variant="outline-success" onClick={() => authenticate()}>Login with MetaMask</Button>
-          </center>
+          <Button id="loginB" style={buttonCenter} variant="outline-success" onClick={() => {authenticate(); document.getElementById("loginB").innerHTML = "Awaiting Connection..."}}>Login with MetaMask</Button>
+        </center>
       </div>
     );
   }
+
+
+
+  
   return (
     <body style={{backgroundColor:"bisque", height:"100vh"}}>
       <div>

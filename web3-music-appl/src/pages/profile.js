@@ -10,7 +10,7 @@ function userProfile(){
             <div class="main">
                 
                 <center>
-                    <h1>Profile</h1>
+                    <h1 style={{fontSize: "4em"}}>Profile</h1>
                     <div class="information">
                         
                         <h2>Wallet Address: </h2>
