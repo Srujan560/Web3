@@ -7,7 +7,6 @@ import Logout from "./Logout";
 
 const divStyle = {
   navbar: {
-    
     paddingLeft: ".5em",
     paddingRight: ".5em"
   }
@@ -31,29 +30,12 @@ const Layout = () => {
             <Nav.Link href="/About">About</Nav.Link>
             <Nav.Link href="/profile">Profile</Nav.Link>
             <Nav.Link href="/upload">Upload</Nav.Link>
+            <Nav.Link href="/MusicPlayer">MusicPlayer</Nav.Link>
           </Nav>
           <Logout />
         </Navbar>
       </Container>
    
-    /*
-    <nav class="navbar navbar-dark bg-dark">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/profile">profile</Link>
-          </li>
-          <li>
-            <Link to="/about">about</Link>
-          </li>
-          <li>
-            <Link to="/upload">upload</Link>
-          </li>
-        </ul>
-        </nav>
-*/
         
   )
 };

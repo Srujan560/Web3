@@ -5,14 +5,9 @@ function home(){
     return (
         <div>
             <center>
-                <h1>Home</h1>
-            </center>    
-            <div class="row">
-                <div class="column">
-                    <img src={logo}/>
-
-                </div>
-            </div>
+                <h1 style={{fontSize: "4em"}}>Home</h1>
+                <img src={logo} width="20%"/>
+            </center> 
             
         </div>
         )
