@@ -1,7 +1,7 @@
 import React from "react";
-import {BrowserRouter, Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {Nav, Navbar, Container} from "react-bootstrap";
-import Home from "./home";
+
 import { Button } from "react-bootstrap";
 import Logout from "./Logout";
 
