@@ -6,33 +6,34 @@ import SongList from "./SongList";
 import sanityClient from "./Client";
 
 const MusicPlayer = () => {
-    const [upload, setupload] = useState(null);
-    useEffect(() => {sanityClient.fetch(
-        `*[_type == "upload"]{
-            songName,
-            aritst,
-            image{
-              asset->{
-                _id,
-                url
-              },
-            },
-            Musicuplo{
-                asset->{
-                    _id,
-                    url
-                  },
-            }
+    // const [upload, setupload] = useState(null);
+    // useEffect(() => {sanityClient.fetch(
+    //     `*[_type == "upload"]{
+    //         songName,
+    //         aritst,
+    //         image{
+    //           asset->{
+    //             _id,
+    //             url
+    //           },
+    //         },
+    //         Musicuplo{
+    //             asset->{
+    //                 _id,
+    //                 url
+    //               },
+    //         }
             
-          }`
-    ).then((data)=>setupload(data)).catch(console.error);}, []);
+    //       }`
+    // ).then((data)=>setupload(data)).catch(console.error);}, []);
     return (
         
         <React.Fragment>
             <Player />
             <SongList />
-            <div >
             {/* <div style={{clear:'both'}}>Below</div> */}
+            {/* <div >
+           
                 {upload &&upload.map((up) =>(
                     <div style={{float:'right'}}>
                         <h3><span>Song name: </span>{up.songName}</h3>
@@ -42,7 +43,7 @@ const MusicPlayer = () => {
                     </div>
                 ))
                 }
-            </div>
+            </div> */}
         </React.Fragment>
         
       
