@@ -11,7 +11,10 @@ function upload() {
     <div>
       <center>
         <h1 style={{fontSize: "4em"}}>Upload</h1>
+        
       </center>
+      
+      {/* <UploadMusic/> */}
     </div>
   );
 }

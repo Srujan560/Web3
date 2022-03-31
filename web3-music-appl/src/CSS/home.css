@@ -1,0 +1,25 @@
+.imageLogo{
+    /* width: 220px;
+    height: 230px;
+    padding: 30px;
+    /* background-color: gray; */
+    /* border-radius: 50px;  */
+    cursor: pointer;
+}
+.imageLogo:hover{
+animation: move 1s forwards;
+}
+@keyframes move{
+    10%{
+        transform : rotate(15deg)
+    }
+    20%{
+        transform : rotate(-15deg)
+    }
+    30%{
+        transform : rotate(15deg)
+    }
+    50%{
+        transform : rotate(0deg)
+    }
+}
