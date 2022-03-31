@@ -23,3 +23,18 @@ path to web3-music-appl
 in that path do npm start
 you will get lot errors but, all you need to do is keep installing packages just googe errors
 
+```
+ yarn dev
+    Starts the development server.
+
+  yarn build
+    Builds the app for production.
+
+  yarn start
+    Runs the built app in production mode.
+
+We suggest that you begin by typing:
+
+  cd web3-using-nextjs
+  yarn dev
+  ```
