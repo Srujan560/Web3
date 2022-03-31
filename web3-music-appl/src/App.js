@@ -12,7 +12,7 @@ import Home from "./pages/home";
 import ReactDOM from "react-dom";
 import Button from 'react-bootstrap/Button';
 import MusicPlayer from "./MusicPlayer";
-
+import Search from './pages/search';
 
 const buttonCenter = {
     width: "30vw",
@@ -53,11 +53,11 @@ function App() {
     <body style={{backgroundColor:"bisque", height:"100vh"}}>
       <div>
         <h4 id="addr">Welcome User: {user.get("username")}</h4>
-        
       </div>
 
       <BrowserRouter>
         <Navbar />
+        <Search />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<About />} />

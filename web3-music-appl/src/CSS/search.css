@@ -1,0 +1,21 @@
+.button {
+  background-color: #b63d18;
+  border: none;
+  color: white;
+  padding: 6.9px 24px; /*nice*/
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+.bar {
+  margin: 2px;
+  height: 36px;
+  width: 256px;
+  text-align: left;
+  background-color:rgb(241, 241, 241);
+}
+
+.button:hover {opacity: 1}
