@@ -3,7 +3,11 @@ import "./App.css";
 import Player from "./Player";
 import SongList from "./SongList";
 // import  { useState, useEffect } from "react";
+<<<<<<< HEAD
 //import sanityClient from "./Client";
+=======
+// import sanityClient from "./Client";
+>>>>>>> ebd0a1cb824ba14aae3e86a554e2d400e8b7d626
 
 const MusicPlayer = () => {
     // const [upload, setupload] = useState(null);
