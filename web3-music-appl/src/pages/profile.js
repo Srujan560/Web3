@@ -32,7 +32,7 @@ function UserProfile() {
                             <h2 >{user.get("username")}</h2>
                             <h3>-------------- </h3>
                             <h2>Balance: </h2>
-                            <h3>0.0{user.get("tokens")}</h3>
+                            <h3>U BROKE{user.get("tokens")}</h3>
                             <h3>-------------- </h3>
                             <h2>Playlists: </h2>
                             <h3>**all your music here**</h3>
