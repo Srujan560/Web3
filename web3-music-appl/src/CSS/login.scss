@@ -1,0 +1,57 @@
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.6em 0.6em 0em var(--hover);
+  transform: translateY(-0.9em);
+}
+
+$colors: (
+  fill: #a972cb,
+  pulse: #ef6eae, 
+  close: #ff7f82, 
+  raise: #45991e, 
+  up: #e4cb58, 
+  slide: #8fc866, 
+  offset: #19bc8b
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+  // Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+button {  
+  color: var(--color);
+  transition: 0.25s;
+  
+  &:hover,
+  &:focus { 
+    border-color: var(--hover);
+    color: rgb(81, 168, 47);
+  }
+}
+
+
+// Basic button styles
+button {
+  background: none;
+  width: 25vw;
+  border: 5px solid;
+  border-radius: 100%;
+  font-size: 7em;
+  color: black;
+  font-family: 'Inconsolata', monospace;
+  line-height: 1;
+  margin-top: 5em;
+  padding: 1em 2em;
+}
+
+
+code { 
+  color: #1bc915;
+  font-family: 'Inconsolata', monospace;
+}

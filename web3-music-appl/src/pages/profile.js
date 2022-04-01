@@ -21,7 +21,7 @@ function UserProfile() {
    
 
         return (
-            <body style={{ backgroundColor: "bisque" }}>
+            <body  style={{backgroundColor:"bisque", height:"100vh", width:"100vw"}}>
                 <div class="main">
 
                     <center>
