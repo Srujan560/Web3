@@ -1,11 +1,11 @@
 body{
-    background-color: bisque;
+    background-color: #1b2838;
     height: 100vh;
     width: 100vw;
 }
 
 h1{
-    color: rgb(255, 0, 0);
+    color: #c94242;
     font-size: 4vw;
     font-family: 'Inconsolata', monospace;
     padding-bottom: .25em;

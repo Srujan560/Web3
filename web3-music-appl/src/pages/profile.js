@@ -16,27 +16,34 @@ function UserProfile() {
     //     console.log(transfersNFT);
     // };
     // fetchNFTTransfers()
-
+    const h1sty = {
+		fontSize: "4vw", 
+		color:"#e0d9cf"
+	}
+	const h2sty = {
+		fontSize:"2vw",
+		color:"grey"
+	}
+	const h3sty = {
+		fontSize:"1vw",
+		marginBottom: "5vh",
+        color:"#c94242"
+	}
 
    
 
         return (
-            <body  style={{backgroundColor:"bisque", height:"100vh", width:"100vw"}}>
+            <body style={{height:"100vh", width:"100vw", backgroundColor:"#1b2838"}}>
                 <div class="main">
-
                     <center>
-                        <h1 style={{ fontSize: "4em" }}>Profile</h1>
+                        <h1 style={h1sty}>Profile</h1>
                         <div class="information">
-
-                            <h2>Wallet Address: </h2>
-                            <h2 >{user.get("username")}</h2>
-                            <h3>-------------- </h3>
-                            <h2>Balance: </h2>
-                            <h3>U BROKE{user.get("tokens")}</h3>
-                            <h3>-------------- </h3>
-                            <h2>Playlists: </h2>
-                            <h3>**all your music here**</h3>
-                            <h3>-------------- </h3>
+                            <h2 style={h2sty}>Wallet Address: </h2>
+                            <h3 style={h3sty}>{user.get("username")}</h3>
+                            <h2 style={h2sty}>Balance: </h2>
+                            <h3 style={h3sty}>U BROKE{user.get("tokens")}</h3>
+                            <h2 style={h2sty}>Playlists: </h2>
+                            <h3 style={h3sty}>**all your music here**</h3>
                         </div>
                     </center>
                 </div>
