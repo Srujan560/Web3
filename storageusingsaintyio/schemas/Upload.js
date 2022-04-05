@@ -23,6 +23,11 @@ export default {
             name: "aritst",
             type: "string",
           },
+          {
+            title: "Eth Adress",
+            name : "eth",
+            type : "string",
+          },
          
           {
             title: "Image for the music",

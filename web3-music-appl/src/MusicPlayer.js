@@ -3,36 +3,36 @@ import "./App.css";
 import Player from "./Player";
 import SongList from "./SongList";
 // import  { useState, useEffect } from "react";
-// import sanityClient from "./Client";
+import sanityClient from "./Client";
 
 const MusicPlayer = () => {
-    // const [upload, setupload] = useState(null);
-    // useEffect(() => {sanityClient.fetch(
-    //     `*[_type == "upload"]{
-    //         songName,
-    //         aritst,
-    //         image{
-    //           asset->{
-    //             _id,
-    //             url
-    //           },
-    //         },
-    //         Musicuplo{
-    //             asset->{
-    //                 _id,
-    //                 url
-    //               },
-    //         }
+    const [upload, setupload] = useState(null);
+    useEffect(() => {sanityClient.fetch(
+        `*[_type == "upload"]{
+            songName,
+            aritst,
+            image{
+              asset->{
+                _id,
+                url
+              },
+            },
+            Musicuplo{
+                asset->{
+                    _id,
+                    url
+                  },
+            }
             
-    //       }`
-    // ).then((data)=>setupload(data)).catch(console.error);}, []);
+          }`
+    ).then((data)=>setupload(data)).catch(console.error);}, []);
     return (
         
         <React.Fragment>
             <Player />
             <SongList />
             {/* <div style={{clear:'both'}}>Below</div> */}
-            {/* <div >
+            <div >
            
                 {upload &&upload.map((up) =>(
                     <div style={{float:'right'}}>
@@ -43,7 +43,7 @@ const MusicPlayer = () => {
                     </div>
                 ))
                 }
-            </div> */}
+            </div>
         </React.Fragment>
         
       
