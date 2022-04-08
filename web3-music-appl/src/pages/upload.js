@@ -22,7 +22,6 @@ const bsty = {
   fontWeight: "bold"
 }
 
-
 const h1sty = {
   fontSize: "4vw", 
   color:"#e0d9cf"
@@ -146,13 +145,13 @@ class Upload extends Component {
             Upload your file here.
           </h2>
           <div class="container" style={containersty}>
-            {/* <label for="song" style={{fontFamily: "'Inconsolata', monospace", fontSize: "1.5vw"}}><b>Song Title</b></label>
+            <label for="song" style={{fontFamily: "'Inconsolata', monospace", fontSize: "1.5vw"}}><b>Song Title</b></label>
             <input type="text" id="song" name="songtitle" placeholder="Song Title..." style={inputsty}/>
 
             <label for="artist" style={{fontFamily: "'Inconsolata', monospace", fontSize: "1.5vw"}}><b>Artist Name</b></label>
-            <input type="text" id="artist" name="artistname" placeholder="Artist Name..." style={inputsty}/> */}
+            <input type="text" id="artist" name="artistname" placeholder="Artist Name..." style={inputsty}/>
             <Form.Label>Upload your audio file here.</Form.Label>
-            <Form.Control type="file" onChange={this.onFileChange}/>
+            <Form.Control type="file" accept="audio/*" onChange={this.onFileChange}/>
             
             <Button class="button" variant="outline-success" style={bsty} onClick={this.onFileUpload}>
               Upload File
