@@ -41,7 +41,7 @@ function ExlporePage() {
                         {/* <audio src={up.Musicuplo.asset.url}></audio> */}
                         {/* <Audio>{up.Musicuplo.asset.url}</Audio> */}
                         <p></p>
-                        <span>Press Play</span>
+                        <span>Press Play Hi</span>
                         <Audio myUrl={up.Musicuplo.asset.url}/>
 
                     </div>
