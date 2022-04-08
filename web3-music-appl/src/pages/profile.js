@@ -43,6 +43,11 @@ function UserProfile() {
                             <h2 style={h2sty}>Balance: </h2>
                             <h3 style={h3sty}>U BROKE{user.get("tokens")}</h3>
                             <h2 style={h2sty}>Playlists: </h2>
+                            <div class="playlist">
+                                
+
+                         
+                            </div>
                             <h3 style={h3sty}>**all your music here**</h3>
                         </div>
                     </center>
