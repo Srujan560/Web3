@@ -37,11 +37,11 @@ function ExlporePage() {
                         <h4><span>Artist: </span>{up.aritst}</h4>
                         <img src={up.image.asset.url} width="100vw" />
                         {/* <p>Hi play this:<audio><source src={up.Musicuplo.asset.url}></source>Hello</audio></p> */}
-                        {/* <p>{up.Musicuplo.asset.url}</p> */}
+                        <p>{up.Musicuplo.asset.url}</p>
                         {/* <audio src={up.Musicuplo.asset.url}></audio> */}
                         {/* <Audio>{up.Musicuplo.asset.url}</Audio> */}
                         <p></p>
-                        <span>Press Play Hi</span>
+                        <span>Press Play</span>
                         <Audio myUrl={up.Musicuplo.asset.url}/>
 
                     </div>

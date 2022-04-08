@@ -1,30 +1,36 @@
-import React,{ useState, useEffect} from "react";
+
+import React, { Component } from "react";
 import { Howl } from "howler";
 
-const soundplay = (src) => {
-    const sound = new Howl({
-        src,
-        html5: true
+class Player extends Component {
 
-    })
+    soundplay = (src) => {
+        const sound = new Howl({
+            src,
+            html5: true
 
-    sound.play();
-}
-    function Player(myUrl){
-        
-        const [isPlaying, setIsPlaying] = useState(false);
+        })
 
+
+
+        sound.play();
+    }
+
+    
+
+
+    render() {
         return (
             <div>
                 {/* <p>{this.renderButtonSound()}</p> */}
-                <button onClick={() => this.soundplay(myUrl)}>Play</button>
+                <button onClick={() => this.soundplay(this.props.myUrl)}>Play</button>
             </div>
 
         );
+
+    }
 }
 export default Player;
-
-
 
 
 
