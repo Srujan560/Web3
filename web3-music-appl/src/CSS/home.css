@@ -5,10 +5,10 @@
 .imageLogo{
     /* width: 220px;
     height: 230px;
-    padding: 30px;
     /* background-color: gray; */
     /* border-radius: 50px;  */
     cursor: pointer;
+    padding: 10px;
 }
 .imageLogo:hover{
 animation: move 1s forwards;
@@ -26,4 +26,28 @@ animation: move 1s forwards;
     50%{
         transform : rotate(0deg)
     }
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .bar {
+    border: green 2px;
+    height: 36px;
+    width: 256px;
+    text-align: left;
+    background-color:rgb(241, 241, 241);
+  }
+  
+  .button:hover {opacity: 1}
+  
+  h1 {
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
 }
