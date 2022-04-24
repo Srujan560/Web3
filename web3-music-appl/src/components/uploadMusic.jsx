@@ -37,22 +37,24 @@ const Container = styled.div`
   transition: border 0.24s ease-in-out;
 `;
 
-function UpdateAlgolia(cid, fileName, songName, artistName) {
-  const client = algoliasearch(
-    "MVJ73ZN1LB",
-    "28948f71f0522927651a734218839dd7"
-  );
-  const index = client.initIndex("test_MusicUploads");
-  const uploadObj = {
-    objectID: cid,
-    uploadName: fileName,
-    artist: artistName,
-    song: songName
-  };
+async function UpdateAlgolia(cid, fileName, songName, artistName) {
+  const appId = "MVJ73ZN1LB";
+  //This is an admin API Key!!!
+  const apiKey = "28948f71f0522927651a734218839dd7";
+  const searchClient = algoliasearch(appId, apiKey);
+  const index = searchClient.initIndex("test_MusicUploads");
+  const uploadObj = [
+    {
+      objectID: cid,
+      uploadName: fileName,
+      artist: artistName,
+      song: songName
+    }
+  ];
   //set upload to a JSON file
   const data = JSON.stringify(uploadObj);
   const parsedData = JSON.parse(data);
-  console.log("The song info being uploaded to algolia: \n" + data);
+  console.log("The song info being uploaded to algolia: \n" + parsedData);
   index.saveObjects(parsedData).then(({ objectIDs }) => {
     console.log(objectIDs);
   });
@@ -112,7 +114,7 @@ function UploadMusic() {
       return;
     }
     //Checked Successfully
-
+    //store files to web3.storage
     const cid = await storeFiles(files);
     UpdateAlgolia(cid, fileName, songName, artistName);
 
