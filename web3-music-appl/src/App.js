@@ -51,7 +51,7 @@ function App() {
 
   
   return (
-    <body style={{height:"100vh", width:"100vw", backgroundColor:"#1b2838"}}>
+    <body style={{height:"100%", width:"100%", backgroundColor:"#1b2838"}}>
       <div>
         <h4 id="addr" style={{fontSize:"1vw", color:"#99948f"}}>Welcome User: {user.get("username")}</h4>
       </div>

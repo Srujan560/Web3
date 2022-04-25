@@ -9,8 +9,8 @@ import { ProductItem } from "./components/productItem";
 import styles from "../src/styles/style.module.css";
 import searchDisplay from "./components/searchDisplay";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
-import AllMusic from "./retrieve";
-
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 function MusicPlayer() {
   //   const appId = "latency";
@@ -21,16 +21,22 @@ function MusicPlayer() {
 
   const Hit = ({ hit }) => {
     const handleClick = () => {
-      var playimg = hit.image;
-      var playsong = hit.music;
-      var title = hit.uploadName;
+      console.log(hit.audio)
     };
     return (
-      <div className={styles.hit}>
-        <div className={styles.artist} onClick={handleClick}>
-          <h4>{hit.song}</h4>
+        <div className={styles.hit}>
+          <div className={styles.artist} onClick={handleClick}>
+            <center><img src={hit.image} width="80%"></img></center>
+            <h4 class="song">{hit.song}</h4>
+            <h3 class="artist">{hit.artist}</h3>
+            <AudioPlayer
+              //autoPlay
+              src={hit.audio}
+              onPlay={e => console.log("onPlay")}
+              // other props here
+            />
+          </div>
         </div>
-      </div>
     );
   };
 
@@ -42,20 +48,6 @@ function MusicPlayer() {
     );
   };
 
-  const Hit = ({ hit }) => {
-    const handleClick = () => {
-      var playimg = hit.image;
-      var playsong = hit.music;
-      var title = hit.uploadName;
-    };
-    return (
-      <div className={styles.hit}>
-        <div className={styles.artist} onClick={handleClick}>
-          <h4>{hit.uploadName}</h4>
-        </div>
-      </div>
-    );
-  };
   //replace seach bar in nav bar with autocomplete bar!!
   return (
     <div style={{height:"150vh", width:"100vw", backgroundColor:"#1b2838"}}>
@@ -89,7 +81,6 @@ function MusicPlayer() {
       </div>
       {/* music search functionality */}
       <div className={styles.searchcont}>
-        <h1>Testing Music uploads display</h1>
         <InstantSearch
           searchClient={searchClient}
           indexName="test_MusicUploads"
@@ -100,7 +91,6 @@ function MusicPlayer() {
           </main>
         </InstantSearch>
       </div>
-      <AllMusic />
       {/* <Player /> */}
       {/* <SongList /> */}
     </React.Fragment>
