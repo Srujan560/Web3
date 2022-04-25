@@ -41,6 +41,22 @@ function MusicPlayer() {
       </div>
     );
   };
+
+  const Hit = ({ hit }) => {
+    const handleClick = () => {
+      var playimg = hit.image;
+      var playsong = hit.music;
+      var title = hit.uploadName;
+    };
+    return (
+      <div className={styles.hit}>
+        <div className={styles.artist} onClick={handleClick}>
+          <h4>{hit.uploadName}</h4>
+        </div>
+      </div>
+    );
+  };
+  //replace seach bar in nav bar with autocomplete bar!!
   return (
     <div style={{height:"150vh", width:"100vw", backgroundColor:"#1b2838"}}>
     <React.Fragment>
