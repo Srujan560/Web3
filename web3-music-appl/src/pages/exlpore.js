@@ -3,6 +3,7 @@ import React, { useState, useEffect} from "react";
 
 import Audio from "../useAblePlayer";
 //https://stackoverflow.com/questions/62387887/issue-with-pausing-audio-in-howler-and-react
+//https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react
 
 function ExlporePage() {
     const [upload, setupload] = useState(null);

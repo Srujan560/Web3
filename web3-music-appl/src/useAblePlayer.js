@@ -10,15 +10,10 @@ class Player extends Component {
             html5: true
 
         })
-
-
-
         sound.play();
     }
 
     
-
-
     render() {
         return (
             <div>
