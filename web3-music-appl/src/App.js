@@ -37,7 +37,7 @@ function App() {
   // const userPerf = Moralis.Object.extend("_users");
   if (!isAuthenticated) {
     return (
-      <div style={{height:"100vh", width:"100vw", backgroundColor:"#1b2838", paddingTop: "15vh"}}>
+      <div style={{height:"150vh", width:"100vw", backgroundColor:"#1b2838", paddingTop: "15vh"}}>
         <center>
           <h1 style={{fontSize:"4vw", color:"#e0d9cf"}}>Welcome to the Web3 Music Player.</h1>
           <h2 style={{fontSize:"2vw", color:"#99948f"}}>Connect your MetaMask wallet below to sign in.</h2>

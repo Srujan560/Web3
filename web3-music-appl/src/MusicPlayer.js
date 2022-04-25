@@ -9,6 +9,8 @@ import { ProductItem } from "./components/productItem";
 import styles from "../src/styles/style.module.css";
 import searchDisplay from "./components/searchDisplay";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import AllMusic from "./retrieve";
+
 
 function MusicPlayer() {
   //   const appId = "latency";
@@ -17,14 +19,30 @@ function MusicPlayer() {
   const apiKey = "676191f4468f9a895db992a7241163cc";
   const searchClient = algoliasearch(appId, apiKey);
 
+  const Hit = ({ hit }) => {
+    const handleClick = () => {
+      var playimg = hit.image;
+      var playsong = hit.music;
+      var title = hit.uploadName;
+    };
+    return (
+      <div className={styles.hit}>
+        <div className={styles.artist} onClick={handleClick}>
+          <h4>{hit.song}</h4>
+        </div>
+      </div>
+    );
+  };
+
   const Content = () => {
     return (
       <div className={styles.content}>
-        <Hits hitComponent={searchDisplay.Hit} />
+        <Hits hitComponent={Hit} />
       </div>
     );
   };
   return (
+    <div style={{height:"150vh", width:"100vw", backgroundColor:"#1b2838"}}>
     <React.Fragment>
       <div className={styles.searchBar}>
         <Autocomplete
@@ -53,7 +71,7 @@ function MusicPlayer() {
           ]}
         />
       </div>
-      {/*music search functionality */}
+      {/* music search functionality */}
       <div className={styles.searchcont}>
         <h1>Testing Music uploads display</h1>
         <InstantSearch
@@ -66,10 +84,11 @@ function MusicPlayer() {
           </main>
         </InstantSearch>
       </div>
-
-      <Player />
-      <SongList />
+      <AllMusic />
+      {/* <Player /> */}
+      {/* <SongList /> */}
     </React.Fragment>
+    </div>
   );
 }
 export default MusicPlayer;
