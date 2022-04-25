@@ -4,7 +4,7 @@
     width: 100%;
 } */
 
-h1{
+h1 {
     color: #c94242;
     font-size: 4vw;
     font-family: 'Inconsolata', monospace;
@@ -12,39 +12,77 @@ h1{
     padding-top: .25em;
 }
 
-h2{
+h2 {
     color: gray;
     font-size: 2vw;
     padding-bottom: 2vw;
     font-family: 'Inconsolata', monospace;
 }
 
-h3{
+h3 {
     color: gray;
     font-size: 1vw;
     font-family: 'Inconsolata', monospace;
 }
-.songtile{
+
+.songtile {
     color: White;
 }
-.exploreMain{
+
+.exploreMain {
     background-color: black;
+
+}
+
+.exploreBoady {
+    background-color: blue;
+}
+
+.explore {
+    height: 70vh;
+    /* 40 */
+    width: 90vw;
+    /* 60 */
+    background-color: black;
+    border-color: red;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    color: aliceblue;
+    margin: auto;
+    margin-top: 10%;
+
+
+
+}
+.helperShoopingCartDiv{
+    background-color:black;
+    text-align: center;
+    float: center;
+    width: 50vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    /* position: fixed; */
+    z-index: 1;
+    transition: all 1s;
+}
+
+.shopingCart {
     
-}
-.exploreBoad{
-    background-color: orange;
-}
-.explore{
-   height: 40vh;
-   width : 60vw;
-   background-color: black;
-   border-color: red;border-style: solid;
-  border-width: 5px;
-  border-radius: 5px;
-  color:aliceblue;
-  margin: auto;
-  margin-top: 10%;
 
-
-
+    text-align: center;
+    display: flex;
+    width: 80%;
+   height: 170%;
+   margin: 10px;
+   padding: 5px;
+   overflow: auto;
+    background-color: lightcyan;
+    border-color: red;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    float: center;
 }
