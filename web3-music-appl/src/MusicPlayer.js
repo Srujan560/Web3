@@ -20,10 +20,26 @@ function MusicPlayer() {
   const Content = () => {
     return (
       <div className={styles.content}>
-        <Hits hitComponent={searchDisplay.Hit} />
+        <Hits hitComponent={Hit} />
       </div>
     );
   };
+
+  const Hit = ({ hit }) => {
+    const handleClick = () => {
+      var playimg = hit.image;
+      var playsong = hit.music;
+      var title = hit.uploadName;
+    };
+    return (
+      <div className={styles.hit}>
+        <div className={styles.artist} onClick={handleClick}>
+          <h4>{hit.uploadName}</h4>
+        </div>
+      </div>
+    );
+  };
+  //replace seach bar in nav bar with autocomplete bar!!
   return (
     <React.Fragment>
       <div className={styles.searchBar}>
