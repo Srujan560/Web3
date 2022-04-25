@@ -73,7 +73,6 @@ function App() {
         <Walletcard/>
       </div> */}
       
-     
     </body>
   );
 }
