@@ -12,6 +12,7 @@ import Home from "./pages/home";
 import ReactDOM from "react-dom";
 import Button from 'react-bootstrap/Button';
 import MusicPlayer from "./MusicPlayer";
+import Player from "./Player";
 import Search from './pages/search';
 import Exlpore from './pages/exlpore';
 //import style from "./CSS/login.css"
@@ -67,6 +68,7 @@ function App() {
           <Route path="/profile" exact element={<Profile />} />
           <Route path="/upload" exact element={<Upload />} />
           <Route path="/MusicPlayer" exact element={<MusicPlayer />} />
+          <Route path="/ButtonPlayer" exact element={<Player />} />
         </Routes>
       </BrowserRouter>
       {/* <div className="app">
