@@ -38,7 +38,7 @@ const Layout = () => {
             <Nav.Link href="/About"  style={{paddingLeft: "1vw"}}>About</Nav.Link>
             <Nav.Link href="/profile"  style={{paddingLeft: "1vw"}}>Profile</Nav.Link>
             <Nav.Link href="/upload" style={{paddingLeft: "1vw"}}>Upload</Nav.Link>
-            <Nav.Link href="/MusicPlayer" style={{paddingLeft: "1vw"}}>MusicPlayer</Nav.Link>
+            
             <Nav.Link href="/ButtonPlayer" style={{paddingLeft: "1vw"}}>ButtonPlayer</Nav.Link>
           </Nav>
           <Search />
