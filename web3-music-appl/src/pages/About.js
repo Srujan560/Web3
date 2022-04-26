@@ -16,7 +16,7 @@ function aboutUs() {
 		marginBottom: "5vh"
 	}
     return (
-	<body style={{backgroundColor: "#1b2838"}}>
+		<body style={{backgroundColor:"#1b2838", height:"100vh"}}>
 		<center>
 			<div style={{ width: "50%", border: ".25vw solid gray", borderRadius: "5vw", marginTop: "1em" }}>
 			

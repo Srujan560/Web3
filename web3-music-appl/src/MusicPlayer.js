@@ -52,7 +52,7 @@ function MusicPlayer() {
   return (
     <div style={{height:"150vh", width:"100vw", backgroundColor:"#1b2838"}}>
     <React.Fragment>
-      <div className={styles.searchBar}>
+      {/* <div className={styles.searchBar}>
         <Autocomplete
           openOnFocus={true}
           placeholder="Search for Music Uploads"
@@ -78,14 +78,14 @@ function MusicPlayer() {
             }
           ]}
         />
-      </div>
+      </div> */}
       {/* music search functionality */}
       <div className={styles.searchcont}>
         <InstantSearch
           searchClient={searchClient}
           indexName="test_MusicUploads"
         >
-          <SearchBox translations={{ placeholder: "Search for music" }} />
+          <SearchBox translations={{ placeholder: "Search for Music" }} />
           <main>
             <Content />
           </main>

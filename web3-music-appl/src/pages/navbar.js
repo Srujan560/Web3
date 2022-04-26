@@ -1,16 +1,16 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {Nav, Navbar, Container} from "react-bootstrap";
-
+import styles from '../styles/style.module.css'
 import { Button } from "react-bootstrap";
 import Logout from "./Logout";
 import Search from "./search"
+
 const divStyle = {
   navbar: {
     paddingLeft: ".5em",
     paddingRight: ".5em"
   }
-  
 };
 
 const Layout = () => {
@@ -38,7 +38,6 @@ const Layout = () => {
             <Nav.Link href="/profile"  style={{paddingLeft: "1vw"}}>Profile</Nav.Link>
             <Nav.Link href="/upload" style={{paddingLeft: "1vw"}}>Upload</Nav.Link>
             <Nav.Link href="/MusicPlayer" style={{paddingLeft: "1vw"}}>MusicPlayer</Nav.Link>
-            
           </Nav>
           <Search />
           <Logout />
