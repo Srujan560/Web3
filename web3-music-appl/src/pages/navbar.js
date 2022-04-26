@@ -34,6 +34,7 @@ const Layout = () => {
         </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/Exlpore" style={{paddingLeft: "1vw"}}>Exlpore</Nav.Link>
             <Nav.Link href="/About"  style={{paddingLeft: "1vw"}}>About</Nav.Link>
             <Nav.Link href="/profile"  style={{paddingLeft: "1vw"}}>Profile</Nav.Link>
             <Nav.Link href="/upload" style={{paddingLeft: "1vw"}}>Upload</Nav.Link>
