@@ -41,31 +41,63 @@ const music=[
     
     }
     ]
+    var howls={}
+    var files=["https://web3muiscbucket.s3.amazonaws.com/LudwigvanBeethovenPianoSonataNo14.mp3","https://web3muiscbucket.s3.amazonaws.com/FredericChopinNocturneNo2Op9.mp3"]
 
-class Player extends Component{
+    for (var i=0;i<files.length;i++){
+        howls[files[i]]=new Howl({
+            src:files[i],
+            html5:true,
+            loop:true
 
-    soundplay=(src)=>{
+        })
+    }
+    class Player extends Component{
+
+    Play(file){
+        howls[file].stop();
+        howls[file].play();
+    }
+
+    stop(file){
+
+        howls[file].stop();
+    }
+    newSound(src){
         const sound =new Howl({
             src,
-            html5:true
+            html5:true,
+            loop:true,
+            volume:.5
             
         })
+        return sound;
+    }
 
-        
-        
-        sound.play();
+
+    raiseVolume(file){
+        howls[file].volume(1);
+    }
+    lowerVolume(file){
+        howls[file].volume(.25);
     }
 
 
     renderButtonSound=()=>{
-        return music.map((soundObj,index)=>{
+        return music.map((soundObj)=>{
+            
+            
             return(
-            <center>
-                <div>
+            
+                <div id={music.length}>
                     <h2 style={h2sty}>{soundObj.name}</h2>
-                    <Button style={buttonCenter} variant="outline-info" key={index} onClick={()=> this.soundplay(soundObj.url)}> ID:{soundObj.id} Name:{soundObj.name}  Author:{soundObj.author}</Button>
+                    
+                    <Button style={buttonCenter} variant="outline-info" onClick={()=> this.Play(soundObj.url)}> Play</Button>
+                    <Button style={buttonCenter} variant="outline-info" onClick={()=> this.stop(soundObj.url)}> Stop</Button>
+                    <Button style={buttonCenter} variant="outline-info" onClick={()=> this.lowerVolume(soundObj.url)}> lower Volume</Button>
+                    <Button style={buttonCenter} variant="outline-info" onClick={()=> this.raiseVolume(soundObj.url)}> raise Volume</Button>
                 </div>
-            </center>
+            
             )
         }
         )
@@ -76,7 +108,7 @@ class Player extends Component{
         <div className="player">
             
             <h1 style={h1sty}> Player</h1>
-            <p>{this.renderButtonSound()}</p>
+            <div>{this.renderButtonSound()}</div>
         </div>
         </center>
     );

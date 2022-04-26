@@ -1,9 +1,9 @@
-import DropArea from "../../components/DropArea";
+// import DropArea from "../../components/DropArea";
 function upload() {
   return (
     <div>
       <p>upload</p>
-      <DropArea />
+      {/* <DropArea /> */}
     </div>
   );
 }
