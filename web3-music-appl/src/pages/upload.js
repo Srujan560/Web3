@@ -22,7 +22,7 @@ const container = {
 
 function upload() {
   return (
-    <body style={{backgroundColor:"#1b2838", height:"100vh"}}>
+    <body style={{backgroundColor:"#1b2838", height:"200vh"}}>
       <div className="container">
         <center>
           <h1 style={h1sty}>Upload</h1>

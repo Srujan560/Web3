@@ -21,12 +21,14 @@ function MusicPlayer() {
 
   const Hit = ({ hit }) => {
     const handleClick = () => {
-      console.log(hit.audio)
+      alert("Now Playing: "+hit.song+"\nBy: "+hit.artist)
     };
     return (
         <div className={styles.hit}>
           <div className={styles.artist} onClick={handleClick}>
-            <center><img src={hit.image} width="80%"></img></center>
+            <center>
+              <div class="image"><img src={hit.image} width="80%"/></div>
+            </center>
             <h4 class="song">{hit.song}</h4>
             <h3 class="artist">{hit.artist}</h3>
             <AudioPlayer
@@ -50,7 +52,7 @@ function MusicPlayer() {
 
   //replace seach bar in nav bar with autocomplete bar!!
   return (
-    <div style={{height:"150vh", width:"100vw", backgroundColor:"#1b2838"}}>
+    <div style={{height:"500vh", width:"100vw", backgroundColor:"#1b2838"}}>
     <React.Fragment>
       {/* <div className={styles.searchBar}>
         <Autocomplete

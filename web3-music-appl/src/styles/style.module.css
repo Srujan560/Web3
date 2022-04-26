@@ -2,6 +2,20 @@ body{
   height: 100%;
 }
 
+img {
+  opacity: 1.0;
+}
+
+img:hover {
+  opacity: 0.1;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  background: url(http://www.slatecube.com/images/play-btn.png) no-repeat center;
+  background-size:contain;
+}
 
 /* UploadMusic Component*/
 .deleteButton {
