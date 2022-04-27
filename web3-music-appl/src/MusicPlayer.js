@@ -8,8 +8,9 @@ import { Autocomplete } from "./components/autocomplete";
 import { ProductItem } from "./components/productItem";
 import styles from "../src/styles/style.module.css";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+//import "instantsearch.css/themes/satellite.css";
 
 function MusicPlayer() {
   //   const appId = "latency";
@@ -20,27 +21,24 @@ function MusicPlayer() {
 
   const Hit = ({ hit }) => {
     const handleClick = () => {
-      alert("Now Playing: "+hit.song+"\nBy: "+hit.artist)
+      alert("Now Playing: " + hit.song + "\nBy: " + hit.artist);
     };
     return (
-        <div className={styles.hit}>
-          <div className={styles.artist} onClick={handleClick}>
-            <center>
-              <div class="image"><img src={hit.image} width="80%"/></div>
-            </center>
-            <h4 class="song">{hit.song}</h4>
-            <h3 class="artist">{hit.artist}</h3>
-            <AudioPlayer
-              //autoPlay
-              src={hit.audio}
-              onPlay={e => console.log("onPlay")}
-              // other props here
+      <div className={styles.hit}>
+        <div className={styles.artist} onClick={handleClick}>
+          <center className={styles.cover}>
+            <img className={styles.coverImg} src={hit.image} width="80%" />
+            <img
+              className={styles.hoverPlay}
+              src="http://www.slatecube.com/images/play-btn.png"
             />
-          </div>
+          </center>
+          <h4 class="song">{hit.song}</h4>
+          <h3 class="artist">{hit.artist}</h3>
         </div>
+      </div>
     );
   };
-
   const Content = () => {
     return (
       <div className={styles.content}>
@@ -51,9 +49,11 @@ function MusicPlayer() {
 
   //replace seach bar in nav bar with autocomplete bar!!
   return (
-    <div style={{height:"500vh", width:"100vw", backgroundColor:"#1b2838"}}>
-    <React.Fragment>
-      {/* <div className={styles.searchBar}>
+    <div
+      style={{ height: "500vh", width: "100vw", backgroundColor: "#1b2838" }}
+    >
+      <React.Fragment>
+        {/* <div className={styles.searchBar}>
         <Autocomplete
           openOnFocus={true}
           placeholder="Search for Music Uploads"
@@ -80,21 +80,27 @@ function MusicPlayer() {
           ]}
         />
       </div> */}
-      {/* music search functionality */}
-      <div className={styles.searchcont}>
-        <InstantSearch
-          searchClient={searchClient}
-          indexName="test_MusicUploads"
-        >
-          <SearchBox translations={{ placeholder: "Search for Music" }} />
-          <main>
-            <Content />
-          </main>
-        </InstantSearch>
-      </div>
-      {/* <Player /> */}
-      {/* <SongList /> */}
-    </React.Fragment>
+        {/* music search functionality */}
+        <div className={styles.searchcont}>
+          <InstantSearch
+            searchClient={searchClient}
+            indexName="test_MusicUploads"
+          >
+            <SearchBox translations={{ placeholder: "Search for Music" }} />
+            <main>
+              <Content />
+            </main>
+          </InstantSearch>
+        </div>
+        {/* <Player /> */}
+        <AudioPlayer
+          //autoPlay
+
+          onPlay={(e) => console.log("onPlay")}
+          // other props here
+        />
+        {/* <SongList /> */}
+      </React.Fragment>
     </div>
   );
 }

@@ -1,20 +1,5 @@
-body{
+body {
   height: 100%;
-}
-
-img {
-  opacity: 1.0;
-}
-
-img:hover {
-  opacity: 0.1;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  transition: all .5s ease;
-  background: url(http://www.slatecube.com/images/play-btn.png) no-repeat center;
-  background-size:contain;
 }
 
 /* UploadMusic Component*/
@@ -58,11 +43,41 @@ img:hover {
   width: 25vw;
   align-content: auto;
   height: 3vh;
-  padding: .5vh;
-
+  padding: 0.5vh;
 }
 /*MusicPlayer.js */
+.content {
+  padding: 20px;
+}
+ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+li {
+  list-style-type: none;
+}
+.cover {
+  height: 21vw;
+}
+.coverImg {
+  height: max-content;
+}
 
+.cover:hover .hoverPlay {
+  opacity: 1;
+}
+.hoverPlay {
+  width: 10vw;
+  transition: 0.5s ease;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -150%);
+  -ms-transform: translate(100%, 100%);
+  text-align: center;
+  align-content: center;
+}
 .hit {
   background: #333;
   width: 25vw;
@@ -74,21 +89,15 @@ img:hover {
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.8),
     -6px -6px 8px rgba(211, 211, 211, 0.151);
 }
-
-h4, h3 {
-  padding-left: 10%;
-}
 .hit:hover {
   cursor: pointer;
 }
 
-.searchcont li {
-  width: 25vw;
-  display: flex;
+h4,
+h3 {
+  padding-left: 10%;
 }
-.searchcont ul {
-  padding: 0;
-}
+
 .search input {
   border: none;
   padding: 10px 15px;
@@ -96,7 +105,7 @@ h4, h3 {
   outline: none;
 }
 
-.navSearch input{
+.navSearch input {
   height: 1vh;
   width: 15vw;
   text-justify: auto;
@@ -104,13 +113,12 @@ h4, h3 {
   border: none;
 }
 
-
 button {
-  margin-left: .5vw;
+  margin-left: 0.5vw;
   padding: 1vh 1vw;
   background: rgb(24, 167, 24);
   border: none;
-  border-radius: .75vw;
+  border-radius: 0.75vw;
 }
 
 /*lower search*/
@@ -121,5 +129,5 @@ input {
   height: 4vh;
   font-size: 2vh;
   border: ".5vh solid";
-  border-radius: .75vw;
+  border-radius: 0.75vw;
 }
