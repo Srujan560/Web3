@@ -7,8 +7,9 @@ import algoliasearch from "algoliasearch";
 import { Autocomplete } from "./components/autocomplete";
 import { ProductItem } from "./components/productItem";
 import styles from "../src/styles/style.module.css";
-import searchDisplay from "./components/searchDisplay";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch-dom";
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 function MusicPlayer() {
   //   const appId = "latency";
@@ -16,6 +17,29 @@ function MusicPlayer() {
   const appId = "MVJ73ZN1LB";
   const apiKey = "676191f4468f9a895db992a7241163cc";
   const searchClient = algoliasearch(appId, apiKey);
+
+  const Hit = ({ hit }) => {
+    const handleClick = () => {
+      alert("Now Playing: "+hit.song+"\nBy: "+hit.artist)
+    };
+    return (
+        <div className={styles.hit}>
+          <div className={styles.artist} onClick={handleClick}>
+            <center>
+              <div class="image"><img src={hit.image} width="80%"/></div>
+            </center>
+            <h4 class="song">{hit.song}</h4>
+            <h3 class="artist">{hit.artist}</h3>
+            <AudioPlayer
+              //autoPlay
+              src={hit.audio}
+              onPlay={e => console.log("onPlay")}
+              // other props here
+            />
+          </div>
+        </div>
+    );
+  };
 
   const Content = () => {
     return (
@@ -25,24 +49,11 @@ function MusicPlayer() {
     );
   };
 
-  const Hit = ({ hit }) => {
-    const handleClick = () => {
-      var playimg = hit.image;
-      var playsong = hit.music;
-      var title = hit.uploadName;
-    };
-    return (
-      <div className={styles.hit}>
-        <div className={styles.artist} onClick={handleClick}>
-          <h4>{hit.uploadName}</h4>
-        </div>
-      </div>
-    );
-  };
   //replace seach bar in nav bar with autocomplete bar!!
   return (
+    <div style={{height:"500vh", width:"100vw", backgroundColor:"#1b2838"}}>
     <React.Fragment>
-      <div className={styles.searchBar}>
+      {/* <div className={styles.searchBar}>
         <Autocomplete
           openOnFocus={true}
           placeholder="Search for Music Uploads"
@@ -68,24 +79,23 @@ function MusicPlayer() {
             }
           ]}
         />
-      </div>
-      {/*music search functionality */}
+      </div> */}
+      {/* music search functionality */}
       <div className={styles.searchcont}>
-        <h1>Testing Music uploads display</h1>
         <InstantSearch
           searchClient={searchClient}
           indexName="test_MusicUploads"
         >
-          <SearchBox translations={{ placeholder: "Search for music" }} />
+          <SearchBox translations={{ placeholder: "Search for Music" }} />
           <main>
             <Content />
           </main>
         </InstantSearch>
       </div>
-
-      <Player />
-      <SongList />
+      {/* <Player /> */}
+      {/* <SongList /> */}
     </React.Fragment>
+    </div>
   );
 }
 export default MusicPlayer;

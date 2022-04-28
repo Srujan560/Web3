@@ -5,8 +5,8 @@ import { getFilesFromPath } from "web3.storage";
 function getAccessToken() {
   // If you're just testing, you can paste in a token
   // and uncomment the following line:
-  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDM1QmJkRGYxMDBhQzZFZjRjRTk1NzZhZWY2QjQwNDBCN0E3ZmE3NzciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDc3MzAxODYyOTksIm5hbWUiOiJ1cGxvYWRNdXNpYyJ9.OlQt_7YGKiGGFB9C0RhkvOGwl6TN5BBCaI6J96uh_E4";
-
+  //return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDM1QmJkRGYxMDBhQzZFZjRjRTk1NzZhZWY2QjQwNDBCN0E3ZmE3NzciLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDc3MzAxODYyOTksIm5hbWUiOiJ1cGxvYWRNdXNpYyJ9.OlQt_7YGKiGGFB9C0RhkvOGwl6TN5BBCaI6J96uh_E4";
+  return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGY5NUI4MTU2MTI5RjI1ZDA3MmNkQmE5QTM2RDEzN2QyRTMwMDc5QzYiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NTA5MTQ0MzAxODMsIm5hbWUiOiJXZWIzIE11c2ljIn0.nEyXTXA8UYbkFXMUV5hbnoJ4TmjIUCZUMocQDoEAQb0"
   // In a real app, it's better to read an access token from an
   // environement variable or other configuration that's kept outside of
   // your code base. For this to work, you need to set the
