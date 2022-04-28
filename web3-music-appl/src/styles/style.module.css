@@ -1,20 +1,5 @@
-body{
+body {
   height: 100%;
-}
-
-img {
-  opacity: 1.0;
-}
-
-img:hover {
-  opacity: 0.1;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  transition: all .5s ease;
-  background: url(http://www.slatecube.com/images/play-btn.png) no-repeat center;
-  background-size:contain;
 }
 
 /* UploadMusic Component*/
@@ -52,17 +37,45 @@ img:hover {
   color: "#e0d9cf";
 }
 
-/* Autocomplete Searchbar component*/
-.searchBar {
-  margin: auto;
-  width: 25vw;
-  align-content: auto;
-  height: 3vh;
-  padding: .5vh;
-
-}
 /*MusicPlayer.js */
+.musicPlayerPage {
+  height: "600vh";
+  width: "100vw";
+  background-color: "1b2838";
+  margin-bottom: 30px; /* Add a bottom margin to avoid content overlay */
+}
+.content {
+  padding: 20px;
+}
+ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+li {
+  list-style-type: none;
+}
+.cover {
+  height: 21vw;
+}
+.coverImg {
+  height: max-content;
+}
 
+.cover:hover .hoverPlay {
+  opacity: 1;
+}
+.hoverPlay {
+  width: 10vw;
+  transition: 0.5s ease;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -150%);
+  -ms-transform: translate(100%, 100%);
+  text-align: center;
+  align-content: center;
+}
 .hit {
   background: #333;
   width: 25vw;
@@ -74,52 +87,28 @@ img:hover {
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.8),
     -6px -6px 8px rgba(211, 211, 211, 0.151);
 }
-
-h4, h3 {
-  padding-left: 10%;
-}
 .hit:hover {
   cursor: pointer;
 }
 
-.searchcont li {
-  width: 25vw;
-  display: flex;
-}
-.searchcont ul {
-  padding: 0;
-}
-.search input {
-  border: none;
-  padding: 10px 15px;
-  margin: 10px 5px;
-  outline: none;
+h4,
+h3 {
+  padding-left: 10%;
 }
 
-.navSearch input{
-  height: 1vh;
+.audioPlayer {
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the bottom of the page */
+  width: 100%; /* Full width */
+}
+.searchBox {
+  margin: 0 auto;
+  align-content: center;
+}
+/* Autocomplete Searchbar component*/
+.navSearch input {
   width: 15vw;
   text-justify: auto;
   margin: none;
   border: none;
-}
-
-
-button {
-  margin-left: .5vw;
-  padding: 1vh 1vw;
-  background: rgb(24, 167, 24);
-  border: none;
-  border-radius: .75vw;
-}
-
-/*lower search*/
-input {
-  padding: 1vh 0 1vh 1vw;
-  margin: 2vh 0 1vh 1vw;
-  width: 25vw;
-  height: 4vh;
-  font-size: 2vh;
-  border: ".5vh solid";
-  border-radius: .75vw;
 }
