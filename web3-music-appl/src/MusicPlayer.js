@@ -19,17 +19,22 @@ function MusicPlayer() {
   const apiKey = "676191f4468f9a895db992a7241163cc";
   const searchClient = algoliasearch(appId, apiKey);
 
+  const [songQueue, setsongQueue] = useState([]);
+  const [playNow, setplayNow] = useState("");
+
   const Hit = ({ hit }) => {
     const handleClick = () => {
-      alert("Now Playing: " + hit.song + "\nBy: " + hit.artist);
+      setplayNow(hit.audio);
+      //alert("Now Playing: " + hit.song + "\nBy: " + hit.artist);
     };
     return (
       <div className={styles.hit}>
-        <div className={styles.artist} onClick={handleClick}>
+        <div className={styles.artist}>
           <center className={styles.cover}>
             <img className={styles.coverImg} src={hit.image} width="80%" />
             <img
               className={styles.hoverPlay}
+              onClick={handleClick}
               src="http://www.slatecube.com/images/play-btn.png"
             />
           </center>
@@ -49,44 +54,18 @@ function MusicPlayer() {
 
   //replace seach bar in nav bar with autocomplete bar!!
   return (
-    <div
-      style={{ height: "500vh", width: "100vw", backgroundColor: "#1b2838" }}
-    >
+    <div className={styles.musicPlayerPage} style={{}}>
       <React.Fragment>
-        {/* <div className={styles.searchBar}>
-        <Autocomplete
-          openOnFocus={true}
-          placeholder="Search for Music Uploads"
-          getSources={({ query }) => [
-            {
-              sourceId: "uploadName",
-              getItems() {
-                return getAlgoliaResults({
-                  searchClient,
-                  queries: [
-                    {
-                      indexName: "test_MusicUploads",
-                      query
-                    }
-                  ]
-                });
-              },
-              templates: {
-                item({ item, components }) {
-                  return <ProductItem hit={item} components={components} />;
-                }
-              }
-            }
-          ]}
-        />
-      </div> */}
         {/* music search functionality */}
         <div className={styles.searchcont}>
           <InstantSearch
             searchClient={searchClient}
             indexName="test_MusicUploads"
           >
-            <SearchBox translations={{ placeholder: "Search for Music" }} />
+            <SearchBox
+              className={styles.searchBox}
+              translations={{ placeholder: "Search for Music" }}
+            />
             <main>
               <Content />
             </main>
@@ -94,8 +73,9 @@ function MusicPlayer() {
         </div>
         {/* <Player /> */}
         <AudioPlayer
+          className={styles.audioPlayer}
           //autoPlay
-
+          src={playNow}
           onPlay={(e) => console.log("onPlay")}
           // other props here
         />

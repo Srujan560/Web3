@@ -37,15 +37,13 @@ body {
   color: "#e0d9cf";
 }
 
-/* Autocomplete Searchbar component*/
-.searchBar {
-  margin: auto;
-  width: 25vw;
-  align-content: auto;
-  height: 3vh;
-  padding: 0.5vh;
-}
 /*MusicPlayer.js */
+.musicPlayerPage {
+  height: "600vh";
+  width: "100vw";
+  background-color: "1b2838";
+  margin-bottom: 30px; /* Add a bottom margin to avoid content overlay */
+}
 .content {
   padding: 20px;
 }
@@ -98,36 +96,19 @@ h3 {
   padding-left: 10%;
 }
 
-.search input {
-  border: none;
-  padding: 10px 15px;
-  margin: 10px 5px;
-  outline: none;
+.audioPlayer {
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the bottom of the page */
+  width: 100%; /* Full width */
 }
-
+.searchBox {
+  margin: 0 auto;
+  align-content: center;
+}
+/* Autocomplete Searchbar component*/
 .navSearch input {
-  height: 1vh;
   width: 15vw;
   text-justify: auto;
   margin: none;
   border: none;
-}
-
-button {
-  margin-left: 0.5vw;
-  padding: 1vh 1vw;
-  background: rgb(24, 167, 24);
-  border: none;
-  border-radius: 0.75vw;
-}
-
-/*lower search*/
-input {
-  padding: 1vh 0 1vh 1vw;
-  margin: 2vh 0 1vh 1vw;
-  width: 25vw;
-  height: 4vh;
-  font-size: 2vh;
-  border: ".5vh solid";
-  border-radius: 0.75vw;
 }
