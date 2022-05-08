@@ -29,12 +29,15 @@ body {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
-  background-color: #fafafa;
   font-size: "4vw";
-  color: "#e0d9cf";
+  color: white;
+  background: rgba(190, 195, 217, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.1px);
+  -webkit-backdrop-filter: blur(9.1px);
+  border: 1px solid rgba(190, 195, 217, 0.4);
 }
 
 /*MusicPlayer.js */
@@ -43,6 +46,60 @@ body {
   width: "100vw";
   background-color: "1b2838";
   margin-bottom: 30px; /* Add a bottom margin to avoid content overlay */
+  display: table;
+}
+.contentRow {
+  display: flex;
+}
+.contentRow::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.searchcont {
+  float: left;
+  width: 80%;
+  padding: 10px;
+  overflow: hidden;
+}
+.queueContainer {
+  width: 20%;
+  background-color: rgb(100, 99, 99);
+  position: absolute;
+  top: 16%;
+  right: 5px;
+  float: right;
+  height: 100%;
+}
+.queueTitle {
+  color: white;
+  font-size: x-large;
+  border-bottom: 5px groove;
+}
+.queuedSong {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.queuedSong:hover {
+  background-color: rgb(68, 66, 66);
+}
+.queuedSong button {
+  float: right;
+  color: white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.5;
+}
+.queuedSong button:hover {
+  opacity: 1;
 }
 .content {
   padding: 20px;
@@ -58,10 +115,6 @@ li {
 .cover {
   height: 21vw;
 }
-.coverImg {
-  height: max-content;
-}
-
 .cover:hover .hoverPlay {
   opacity: 1;
 }
@@ -101,10 +154,22 @@ h3 {
   bottom: 0; /* Position the navbar at the bottom of the page */
   width: 100%; /* Full width */
 }
-.searchBox {
-  margin: 0 auto;
-  align-content: center;
+
+.queueButton {
+  margin-left: 0.5vw;
+  padding: 1vh 1vw;
+  background: rgb(24, 167, 24);
+  border: none;
+  border-radius: 0.75vw;
+  float: right;
+  position: relative;
+  top: -55px;
+  left: -5%;
 }
+.queueButton:hover {
+  opacity: 0.5;
+}
+
 /* Autocomplete Searchbar component*/
 .navSearch input {
   width: 15vw;
