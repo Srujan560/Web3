@@ -1,5 +1,5 @@
 
-function about(){
+function agitbout(){
     return(
         <div>
             <p>About</p>
